@@ -21,4 +21,20 @@
  * or applicative order: The predicate expression is evaluated first, and the
  * result determines whether to evaluate the consequent or the alternative
  * expression.)
+ *
  */
+
+/*
+ * Answer
+ *
+ * Using applicative-order evaluation (as JavaScript's interpreter does), the
+ * result will be an infinite loop. This is because applicative-order
+ * evaluation first evaluates a function's arguments before proceeding. Since
+ * one of our arguments is a function which calls itself, the function argument
+ * `p()` will recurse infinitely.
+ *
+ * Normal-order evaluation does not evaluate arguments until their values are
+ * needed. The predicate `0 === 0` will be evaluated first as `true` and then
+ * the consequent expression `0` will be evaluated and returned.
+ *
+ * */
