@@ -1,4 +1,5 @@
 /*
+ * Exercise 1.1
  *
  * Below is a sequence of statements. What is the result printed by the
  * interpreter in response to each statement? Assume the sequence is to be
